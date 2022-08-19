@@ -1,5 +1,5 @@
 package bridgelab;
-public class LinkedList<T>{
+public class LinkedList<T> {
     Node<T> head;
     Node<T> tail;
 
@@ -14,12 +14,13 @@ public class LinkedList<T>{
         }
 
     }
+
     public void add(T data) {
         Node<T> newNode = new Node(data);
         if (head == null) {
             head = newNode;
             tail = newNode;
-        }else{
+        } else {
             tail.next = newNode;
             tail = newNode;
         }
@@ -29,19 +30,17 @@ public class LinkedList<T>{
         Node<T> newNode = new Node(data);
         if (head == null) {
             head = newNode;
-        }else{
+        } else {
             tail.next = newNode;
         }
         tail = newNode;
     }
 
 
-
     public void show() {
-        if(head == null){
+        if (head == null) {
             System.out.println("Linked list Empty");
-        }
-        else {
+        } else {
             Node<T> temp = head;
             while (temp != null) {
                 System.out.println(temp.data + " ");
@@ -51,12 +50,12 @@ public class LinkedList<T>{
         }
     }
 
-    public void insertMid(int pos,T data) {
+    public void insertMid(int pos, T data) {
         Node<T> newNode = new Node(data);
 
         Node<T> current = this.head;
         Node<T> previous = this.head;
-        while (current.next !=null && pos>0){
+        while (current.next != null && pos > 0) {
 
             previous = current;
             current = current.next;
@@ -66,13 +65,28 @@ public class LinkedList<T>{
     }
 
     public T popAtFirst() {
-             T temp;
-            if (head == null) {
-                System.out.println("Stack Over Flow");
-            }
-            temp = head.data;
-            head = head.next;
-            return temp;
+        System.out.println("After deleting first element");
+        T temp;
+        if (head == null) {
+            System.out.println("Stack Over Flow");
         }
-
+        temp = head.data;
+        head = head.next;
+        return temp;
+    }
+    public int popAtLast() {
+        System.out.println("Deleting last element of data from the list");
+        if (head == null) {
+            System.out.println("Empty LinkedList");
+        } else {
+            Node current = head;
+            Node previous = head;
+            while (current.next != null) {
+                previous = current;
+                current = current.next;
+            }
+            previous.next = null;
+        }
+        return 0;
+    }
 }

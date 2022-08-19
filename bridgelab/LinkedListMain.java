@@ -19,7 +19,7 @@ public class LinkedListMain {
         list2.add(70);
         list2.show();
         list2.popAtFirst();
-        System.out.println("After deleting first element");
+        list2.popAtLast();
         list2.show();
 
         LinkedList<Integer> list3 = new LinkedList<>();
@@ -27,11 +27,6 @@ public class LinkedListMain {
         list3.apendNode(30);
         list3.apendNode(70);
         list3.show();
-
-
-
-
-
 
     }
 }
