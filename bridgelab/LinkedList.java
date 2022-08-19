@@ -1,7 +1,5 @@
 package bridgelab;
-
 public class LinkedList<T>{
-
     Node<T> head;
     Node<T> tail;
 
@@ -16,7 +14,6 @@ public class LinkedList<T>{
         }
 
     }
-
     public void add(T data) {
         Node<T> newNode = new Node(data);
         if (head == null) {
@@ -26,6 +23,16 @@ public class LinkedList<T>{
             tail.next = newNode;
             tail = newNode;
         }
+    }
+
+    public void apendNode(T data) {
+        Node<T> newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        }else{
+            tail.next = newNode;
+        }
+        tail = newNode;
     }
 
     public void show() {
