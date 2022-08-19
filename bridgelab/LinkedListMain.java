@@ -18,6 +18,9 @@ public class LinkedListMain {
         list2.add(30);
         list2.add(70);
         list2.show();
+        list2.popAtFirst();
+        System.out.println("After deleting first element");
+        list2.show();
 
         LinkedList<Integer> list3 = new LinkedList<>();
         list3.apendNode(56);
