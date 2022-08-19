@@ -35,6 +35,8 @@ public class LinkedList<T>{
         tail = newNode;
     }
 
+
+
     public void show() {
         if(head == null){
             System.out.println("Linked list Empty");
@@ -47,5 +49,19 @@ public class LinkedList<T>{
             }
             System.out.println();
         }
+    }
+
+    public void insertMid(int pos,T data) {
+        Node<T> newNode = new Node(data);
+
+        Node<T> current = this.head;
+        Node<T> previous = this.head;
+        while (current.next !=null && pos>0){
+
+            previous = current;
+            current = current.next;
+        }
+        previous.next = newNode;
+        newNode.next = current;
     }
 }
