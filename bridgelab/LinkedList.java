@@ -98,6 +98,7 @@ public class LinkedList<T> {
             return true;
         }
         return false;
+
     }
 
         }

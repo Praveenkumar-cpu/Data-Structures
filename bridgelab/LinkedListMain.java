@@ -32,7 +32,5 @@ public class LinkedListMain {
             System.out.println("Element Not found");
         else
             System.out.println("Element Found");
-
-
     }
 }
