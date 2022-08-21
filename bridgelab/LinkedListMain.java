@@ -28,5 +28,11 @@ public class LinkedListMain {
         list3.apendNode(70);
         list3.show();
 
+        if (list2.searchNode(30))
+            System.out.println("Element Not found");
+        else
+            System.out.println("Element Found");
+
+
     }
 }

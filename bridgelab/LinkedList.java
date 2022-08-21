@@ -36,7 +36,6 @@ public class LinkedList<T> {
         tail = newNode;
     }
 
-
     public void show() {
         if (head == null) {
             System.out.println("Linked list Empty");
@@ -74,6 +73,7 @@ public class LinkedList<T> {
         head = head.next;
         return temp;
     }
+
     public int popAtLast() {
         System.out.println("Deleting last element of data from the list");
         if (head == null) {
@@ -89,4 +89,19 @@ public class LinkedList<T> {
         }
         return 0;
     }
-}
+
+    public boolean searchNode(T x) {
+        Node current = head;
+        while (current != null) {
+            if (current.data.equals(x))
+                current = current.next;
+            return true;
+        }
+        return false;
+    }
+
+        }
+
+
+
+
