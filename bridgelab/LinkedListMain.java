@@ -16,6 +16,7 @@ public class LinkedListMain {
 
         list2.add(56);
         list2.add(30);
+      //  list2.deleteAnyNode(30);
         list2.add(70);
         list2.show();
         list2.popAtFirst();
@@ -26,6 +27,7 @@ public class LinkedListMain {
         list3.apendNode(56);
         list3.apendNode(30);
         list3.apendNode(70);
+        list3.deleteAnyNode(30);
         list3.show();
 
         if (list2.searchNode(30))
@@ -33,4 +35,7 @@ public class LinkedListMain {
         else
             System.out.println("Element Found");
     }
+
+
+
 }

@@ -101,7 +101,22 @@ public class LinkedList<T> {
 
     }
 
+    public void deleteAnyNode(T data) {
+        System.out.println("deleting node with the value"+ " "+data +  "    ");
+        Node cur = head;
+        Node prev = head;
+
+        while (cur != null && cur.data != data){
+            prev = cur;
+            cur = cur.next;
         }
+            if(cur !=null){
+                prev.next = cur.next;
+            }else {
+                System.out.println("value"+ data + "Not found");
+            }
+    }
+}
 
 
 
