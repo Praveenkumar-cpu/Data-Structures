@@ -116,6 +116,30 @@ public class LinkedList<T> {
                 System.out.println("value"+ data + "Not found");
             }
     }
+
+    public void sortInAsceding() {
+        Node cur = head, index = null;
+        int temp;
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        } else {
+            while (cur != null) {
+                index = cur.next;
+                while (index != null) {
+                    if (cur.data.hashCode()>index.data.hashCode()) {
+                        temp = cur.data.hashCode();
+                        cur.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                cur = cur.next;
+            }
+        }
+    }
+
+
 }
 
 
